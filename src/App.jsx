@@ -268,7 +268,7 @@ const App = () => {
           <div className="flex flex-col md:flex-row w-full h-full p-6 space-y-6 md:space-y-0 md:space-x-6">
             {/* Left: Project details */}
             <div className="flex-1">
-              <h2 className="text-4xl font-bold mb-4 text-purple-300">
+              <h2 className="text-4xl font-bold mb-4 text-red-300">
                 {selectedProject.title}
               </h2>
               <p className="mb-4 text-lg leading-relaxed">
@@ -282,7 +282,7 @@ const App = () => {
                 {selectedProject.tech.map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-purple-800 px-2 py-1 rounded-full text-sm"
+                    className="bg-cyan-400 px-2 py-1 rounded-full text-sm"
                   >
                     {tech}
                   </span>
