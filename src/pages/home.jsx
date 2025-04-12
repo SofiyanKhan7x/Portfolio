@@ -1,9 +1,10 @@
 
+
 const Home = () => {
   return (
-    <div className="flex items-center justify-end h-full w-full px-4 sm:px-8 md:px-16 py-10 mt-5 sm:mt-2 lg:mt-0 ">
+    <div className="flex items-center justify-end h-full w-full px-4 sm:px-8 md:px-16 py-10 mt-5 sm:mt-2 lg:mt-0">
       <div className="max-w-3xl">
-        <p className="text-base sm:text-lg md:text-xl leading-relaxed text-justify">
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed text-justify animate-slideDown">
           I am an MCA student at MIT Aurangabad, specializing in backend
           development. With a strong foundation in programming languages such as
           Java and Python, as well as web development skills in HTML and CSS, I
@@ -16,6 +17,24 @@ const Home = () => {
           Senior Under Officer.
         </p>
       </div>
+
+      {/* Inline CSS for animation */}
+      <style jsx>{`
+        @keyframes slideDown {
+          0% {
+            transform: translateY(-100px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        .animate-slideDown {
+          animation: slideDown 1s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };

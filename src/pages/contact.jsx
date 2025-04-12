@@ -1,8 +1,9 @@
+
 import JsEmail from "../services/jsEmail";
 
 const Contact = () => {
   return (
-    <div className="relative flex flex-col-reverse md:block w-full px-4 py-5 m-auto">
+    <div className="relative flex flex-col-reverse md:block w-full px-4 py-5 m-auto animate-slideDown">
       {/* Social Links - centered on mobile, right-fixed on desktop */}
       <div className="flex flex-col items-center text-center md:items-start md:text-left pt-5 space-y-4 text-xl sm:text-2xl md:text-3xl font-semibold text-white md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2">
         <a
@@ -41,6 +42,24 @@ const Contact = () => {
       <div className="w-full flex justify-center mr-16 lg:pr-34">
         <JsEmail />
       </div>
+
+      {/* Inline CSS for animation */}
+      <style jsx>{`
+        @keyframes slideDown {
+          0% {
+            transform: translateY(-100px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        .animate-slideDown {
+          animation: slideDown 1s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };

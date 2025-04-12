@@ -1,5 +1,4 @@
 
-// export default Projects;
 import { useState } from "react";
 
 const Projects = () => {
@@ -21,47 +20,68 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(projectList[0]);
 
   return (
-    <div className="flex flex-col lg:flex-row-reverse  w-full h-full p-4 sm:p-6">
-      {/* Project List */}
-      <div className="w-full lg:w-64 flex flex-col items-center text-center lg:items-start lg:text-left space-y-0 mb-6 lg:mb-0  lg:float-end lg:pl-20">
-        {projectList.map((project, index) => (
-          <div
-            key={index}
-            onClick={() => setSelectedProject(project)}
-            className={`cursor-pointer text-base sm:text-lg font-semibold hover:text-purple-300 transition-colors ${
-              selectedProject.title === project.title
-                ? "text-green-400"
-                : "text-gray-300"
-            }`}
-          >
-            {project.title}
-          </div>
-        ))}
-      </div>
-
-      {/* Project Details */}
-      <div className="flex-1 max-w-4xl">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-red-300 text-center lg:text-left">
-          {selectedProject.title}
-        </h2>
-        <p className="mb-6 text-base sm:text-lg leading-relaxed text-justify text-white">
-          {selectedProject.description}
-        </p>
-
-        <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">
-          Technologies Used:
-        </h3>
-        <div className="flex flex-wrap gap-2 text-sm text-gray-200 font-semibold">
-          {selectedProject.tech.map((tech, index) => (
-            <span
+    <div className="flex flex-col lg:flex-row-reverse w-full h-full p-4 sm:p-6">
+      {/* Main Wrapper with Animation */}
+      <div className="animate-slideDown w-full">
+        {/* Project List */}
+        <div className="w-full lg:w-64 flex flex-col items-center text-center lg:items-start lg:text-left space-y-0 mb-6 lg:mb-0 lg:float-end lg:pl-20">
+          {projectList.map((project, index) => (
+            <div
               key={index}
-              className="bg-purple-400 px-2 py-1 rounded-full text-sm"
+              onClick={() => setSelectedProject(project)}
+              className={`cursor-pointer text-base sm:text-lg font-semibold hover:text-purple-300 transition-colors ${
+                selectedProject.title === project.title
+                  ? "text-green-400"
+                  : "text-gray-300"
+              }`}
             >
-              {tech}
-            </span>
+              {project.title}
+            </div>
           ))}
         </div>
+
+        {/* Project Details */}
+        <div className="flex-1 max-w-4xl">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-red-300 text-center lg:text-left">
+            {selectedProject.title}
+          </h2>
+          <p className="mb-6 text-base sm:text-lg leading-relaxed text-justify text-white">
+            {selectedProject.description}
+          </p>
+
+          <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">
+            Technologies Used:
+          </h3>
+          <div className="flex flex-wrap gap-2 text-sm text-gray-200 font-semibold">
+            {selectedProject.tech.map((tech, index) => (
+              <span
+                key={index}
+                className="bg-purple-400 px-2 py-1 rounded-full text-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Inline CSS for Animation */}
+      <style jsx>{`
+        @keyframes slideDown {
+          0% {
+            transform: translateY(-100px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        .animate-slideDown {
+          animation: slideDown 1s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };
