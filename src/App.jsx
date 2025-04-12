@@ -1,60 +1,31 @@
-import { useState } from "react";
-import Home from "./pages/home";
-import Projects from "./pages/projects";
-import Contact from "./pages/contact";
+<aside className="w-full md:w-60 p-4 md:p-6 flex md:flex-col items-center md:items-start justify-between md:justify-start bg-black bg-opacity-50 md:bg-transparent">
+  <div>
+    <h1 className="text-xl sm:text-2xl font-bold mb-1 md:mb-2">
+      Momin Sofiyan Khan
+    </h1>
+    <p className="text-sm sm:text-base font-semibold md:mb-8 text-center md:text-left">
+      Angular/ReactJs <br /> Spring Boot
+    </p>
+  </div>
 
-const App = () => {
-  const [activeSection, setActiveSection] = useState("home");
-
-  const linkClass = (section) =>
-    `text-3xl font-semibold mb-4 transition-colors cursor-pointer ${
-      activeSection === section ? "text-purple-300" : ""
-    }`;
-
-  return (
-    <div
-      className="flex h-screen text-white bg-cover bg-center"
-      style={{ backgroundImage: `url("/src/assets/portfoliobg.gif")` }}
+  <nav className="flex space-x-4 md:space-x-0 md:space-y-4 md:flex-col text-center mt-2 md:mt-0">
+    <span
+      onClick={() => setActiveSection("home")}
+      className={linkClass("home")}
     >
-      <aside className="w-60 p-2">
-        <h1 className="text-2xl font-bold leading-tight mb-2">
-          Momin Sofiyan Khan
-        </h1>
-        <p className="mb-12 text-xl font-semibold">
-          Angular/ReactJs
-          <br />
-          Spring Boot
-        </p>
-
-        <nav className="flex flex-col space-y-4">
-          <span
-            onClick={() => setActiveSection("home")}
-            className={linkClass("home")}
-          >
-            Home
-          </span>
-          <span
-            onClick={() => setActiveSection("projects")}
-            className={linkClass("projects")}
-          >
-            Projects
-          </span>
-          <span
-            onClick={() => setActiveSection("contact")}
-            className={linkClass("contact")}
-          >
-            Contact
-          </span>
-        </nav>
-      </aside>
-
-      <main className="flex-1 p-6 overflow-y-auto">
-        {activeSection === "home" && <Home />}
-        {activeSection === "projects" && <Projects />}
-        {activeSection === "contact" && <Contact />}
-      </main>
-    </div>
-  );
-};
-
-export default App;
+      Home
+    </span>
+    <span
+      onClick={() => setActiveSection("projects")}
+      className={linkClass("projects")}
+    >
+      Projects
+    </span>
+    <span
+      onClick={() => setActiveSection("contact")}
+      className={linkClass("contact")}
+    >
+      Contact
+    </span>
+  </nav>
+</aside>;
