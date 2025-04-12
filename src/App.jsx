@@ -17,10 +17,10 @@ const App = () => {
       <Screen /> {/* Splash Screen appears when page opens */}
       <div
         className="flex flex-col md:flex-row h-screen text-white bg-cover bg-center"
-        // style={{ backgroundImage: `url("/src/assets/portfoliobg.png")` }}
+        style={{ backgroundImage: `url("./public/portfoliobg.png")` }}
       >
-        {/* <aside className="w-full md:w-60 p-4 flex-shrink-0 bg-black/50 md:bg-transparent"> */}
-        <aside className="w-full md:w-60 p-4 flex-shrink-0 bg-cyan-700">
+        <aside className="w-full md:w-60 p-4 flex-shrink-0 bg-black/50 md:bg-transparent">
+        {/* <aside className="w-full md:w-60 p-4 flex-shrink-0 bg-cyan-700"> */}
           <h1 className="text-xl sm:text-2xl font-bold leading-tight mb-2">
             Momin Sofiyan Khan
           </h1>
@@ -51,8 +51,8 @@ const App = () => {
           </nav>
         </aside>
 
-        {/* <main className="flex-1 p-4 sm:p-6 overflow-y-auto bg-black/30 md:bg-transparent"> */}
-        <main className="flex-1 p-4 sm:p-6 overflow-y-auto bg-cyan-700">
+        <main className="flex-1 p-4 sm:p-6 overflow-y-auto bg-black/30 md:bg-transparent">
+        {/* <main className="flex-1 p-4 sm:p-6 overflow-y-auto bg-cyan-"> */}
           {activeSection === "home" && <Home />}
           {activeSection === "projects" && <Projects />}
           {activeSection === "contact" && <Contact />}
