@@ -27,7 +27,7 @@ const App = () => {
           <br />
           Spring Boot
         </p>
-
+        {/* <img src="./src/assets/me.jpeg" alt="" /> */}
         <nav className="flex md:flex-col gap-4 justify-center md:justify-start">
           <span
             onClick={() => setActiveSection("home")}
