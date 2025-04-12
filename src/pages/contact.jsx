@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="flex justify-center items-center h-full w-full px-4">
+    <div className="flex justify-end mt-80 h-full w-full px-4">
       <div className="flex flex-col space-y-4 text-2xl sm:text-3xl font-semibold text-center">
         <a
           href="https://www.linkedin.com/in/momin-sofiyan-khan-6bab05313/"

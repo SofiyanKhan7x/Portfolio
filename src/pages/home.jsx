@@ -11,7 +11,7 @@ const Home = () => {
         projects and am continuously learning to stay updated with the latest
         technological advancements. My goal is to contribute to meaningful
         projects and grow as a backend developer. Outside of tech, I am a NCC
-        Senior Under Officer Cadet
+        Senior Under Officer 
       </p>
     </div>
   );
