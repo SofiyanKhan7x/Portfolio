@@ -17,7 +17,7 @@ const App = () => {
       <Screen /> {/* Splash Screen appears when page opens */}
       <div
         className="flex flex-col md:flex-row h-screen text-white bg-cover bg-center"
-        style={{ backgroundImage: `url("./public/portfoliobg.gif")` }}
+        style={{ backgroundImage: `url("/portfoliobg.gif")` }}
       >
         <aside className="w-full md:w-60 p-4 flex-shrink-0 bg-black/50 md:bg-transparent">
         {/* <aside className="w-full md:w-60 p-4 flex-shrink-0 bg-cyan-700"> */}
