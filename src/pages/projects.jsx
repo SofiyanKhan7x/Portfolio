@@ -24,7 +24,7 @@ const Projects = () => {
       {/* Main Wrapper with Animation */}
       <div className="animate-slideDown w-full">
         {/* Project List */}
-        <div className="w-full lg:w-64 flex flex-col items-center text-center lg:items-start lg:text-left space-y-0 mb-6 lg:mb-0 lg:float-end lg:pl-20">
+        <div className="w-full lg:w-64 flex flex-col items-left text-left lg:items-start lg:text-left space-y-0 mb-6 lg:mb-0 lg:float-end lg:pl-20">
           {projectList.map((project, index) => (
             <div
               key={index}
@@ -52,7 +52,7 @@ const Projects = () => {
           <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">
             Technologies Used:
           </h3>
-          <div className="flex flex-wrap gap-2 text-sm text-gray-200 font-semibold">
+          <div className="flex flex-wrap gap-2 text-sm text-gray-200 font-semibold mb-8">
             {selectedProject.tech.map((tech, index) => (
               <span
                 key={index}
