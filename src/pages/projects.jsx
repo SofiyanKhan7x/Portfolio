@@ -15,6 +15,12 @@ const Projects = () => {
         "This User Management System is a web-based application that allows users to register and log in securely. Once registered, users can access the system, but their access depends on their account status. If the admin deactivates a user, that user will not be able to log in until the admin reactivates the account. The admin has access to a dedicated dashboard where they can view the entire user list. From this dashboard, the admin can activate or deactivate users as needed and also has the ability to permanently delete any user from the system. This setup provides a simple and effective way to manage user access and maintain control over who can use the platform.",
       tech: ["HTML", "CSS/Bootstrap", "JAVA ", "JavaScript", "JSP"],
     },
+    {
+      title: "ProductNest-Api",
+      description:
+        "ProductNest API is a Spring Boot RESTful service that allows users to add, update, delete, and view products. Designed for simplicity and scalability, it supports full CRUD operations using a clean architecture and follows best REST API practices. Powered by an H2 in-memory database for rapid development and testing.",
+      tech: ["JAVA ", "Spring Boot RESTful"],
+    },
   ];
 
   const [selectedProject, setSelectedProject] = useState(projectList[0]);
