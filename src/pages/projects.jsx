@@ -22,7 +22,7 @@ const Projects = () => {
       tech: ["JAVA ", "Spring Boot RESTful"],
     },
     {
-      title: "Flour Mill Management System",
+      title: "Flour Mill ",
       description:
         "This is a full-stack application for managing customers and their transactions for a flour mill. It features a secure admin login and offers a clean, modern, and responsive dashboard where the admin can add new customers, update customer details, and delete customers. Each customer can have multiple transactions, and the admin can efficiently manage these by adding, updating, or deleting them. Transactions include flour type, in-time, out-time, quantity, unit price, and total amount. The frontend is built using ReactJS and TailwindCSS for a fast and sleek user experience, while the backend is powered by Spring Boot, providing robust RESTful APIs. All data is stored securely in a PostgreSQL database, ensuring reliability and scalability. The entire system is designed for simplicity, ease of use, and seamless management of customers and their transaction histories.",
       tech: ["ReactJs","JAVA", "Spring Boot RESTful"," PostgreSQL", "TailwindCSS"],
